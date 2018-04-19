@@ -1,6 +1,8 @@
 import os
 import time
 from sense_hat import SenseHat
+import datetime
+
 
 def get_cpu_temp():
   res = os.popen("vcgencmd measure_temp").readline()
@@ -38,3 +40,7 @@ while True:
  north = round(north,2)
  msg="N=%s" %(north)
  sense.show_message(msg,text_colour=[255,255,0])
+ 
+ i = datetime.datetime.now()
+ msg="t=%s:%s" %(i.hour,i.minute) 
+ sense.show_message(msg,text_colour=[128,0,128])
