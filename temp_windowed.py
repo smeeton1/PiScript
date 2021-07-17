@@ -14,7 +14,7 @@ sense.set_rotation(270)
 
 
 def main():
-    win = GraphWin('Draw a Triangle', 450, 100)
+    win = GraphWin('Sense Hat', 450, 100)
     #win.yUp() # right side up coordinates
     win.setBackground('blue')
     message = Text(Point(60, 15), 'Temperature')
