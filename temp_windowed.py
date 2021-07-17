@@ -14,7 +14,7 @@ sense.set_rotation(270)
 
 
 def main():
-    win = GraphWin('Draw a Triangle', 520, 100)
+    win = GraphWin('Draw a Triangle', 450, 100)
     #win.yUp() # right side up coordinates
     win.setBackground('blue')
     message = Text(Point(60, 15), 'Temperature')
@@ -35,13 +35,13 @@ def main():
     message3.setSize(12)
     message3.draw(win)
 
-    message4 = Text(Point(360, 15), 'North')
+    message4 = Text(Point(320, 15), 'North')
     message4.setTextColor('black')
     message4.setStyle('italic')
     message4.setSize(12)
     message4.draw(win)
 
-    message5 = Text(Point(480, 15), 'CPU')
+    message5 = Text(Point(400, 15), 'CPU')
     message5.setTextColor('black')
     message5.setStyle('italic')
     message5.setSize(12)
@@ -72,12 +72,12 @@ def main():
         pres.draw(win)
 
 
-        nort = Text(Point(360, 60), round(sense.get_compass(),1))
+        nort = Text(Point(320, 60), round(sense.get_compass(),1))
         nort.setTextColor('black')
         nort.setSize(15)
         nort.draw(win)
 
-        cpu = Text(Point(480, 60), round(get_cpu_temp(),1))
+        cpu = Text(Point(400, 60), round(get_cpu_temp(),1))
         cpu.setTextColor('black')
         cpu.setSize(15)
         cpu.draw(win)
