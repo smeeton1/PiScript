@@ -54,7 +54,7 @@ def main():
         tem = (tem+sense.get_temperature_from_humidity())/2
         tem = round(tem, 1)
 
-        temp = Text(Point(60, 60), round(sense.get_temperature_from_pressure()(),1))
+        temp = Text(Point(60, 60), round(sense.get_temperature_from_pressure(),1))
         temp.setTextColor('black')
         temp.setSize(15)
         temp.draw(win)
