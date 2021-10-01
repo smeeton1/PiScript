@@ -5,6 +5,7 @@ import time
 from sense_hat import SenseHat
 import datetime
 import beepy
+import socket
 
 def get_cpu_temp():
   res = os.popen("vcgencmd measure_temp").readline()
@@ -14,9 +15,14 @@ def get_cpu_temp():
 sense = SenseHat()
 sense.set_rotation(270)
 
+ip = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+ip.connect(("8.8.8.8",80))
+ipp=ip.getsockname()[0]
+ip.close
+
 
 def main():
-    win = GraphWin('Sense Hat', 450, 140)
+    win = GraphWin('Sense Hat', 450, 160)
     #win.yUp() # right side up coordinates
     win.setBackground('white')
     message = Text(Point(60, 15), 'Temperature')
@@ -54,6 +60,17 @@ def main():
     message6.setStyle('italic')
     message6.setSize(12)
     message6.draw(win)
+    
+    message6 = Text(Point(60, 135), 'IP')
+    message6.setTextColor('black')
+    message6.setStyle('italic')
+    message6.setSize(12)
+    message6.draw(win)
+    
+    ippp=Text(Point(200, 135), ipp)
+    ippp.setTextColor('black')
+    ippp.setSize(15)
+    ippp.draw(win)
     
     go = True
     i = 1
