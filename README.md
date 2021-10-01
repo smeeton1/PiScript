@@ -17,4 +17,4 @@ Writes the data to a window. The program writes temperature, humidity, pressure,
 ### test.py 
 Is a simple script to test that the sense hat is working.
 
-[comment]:<>(comment test)
+[comment]: <> (comment test)
