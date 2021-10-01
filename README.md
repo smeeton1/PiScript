@@ -1,9 +1,9 @@
-## PiScript
+# PiScript
 
 
 PiScript is a collection of scripts to run the sense hat and monitor environmental conditions on a raspberry pi. The scripts have been run on a pi 3 and 4.
 
-# Script Description
+## Script Description
 
 temp.py writes the environmental data and time to the LEDs on the sense hat.
 
