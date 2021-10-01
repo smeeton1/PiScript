@@ -5,12 +5,16 @@ PiScript is a collection of scripts to run the sense hat and monitor environment
 
 ## Script Description
 
-temp.py writes the environmental data and time to the LEDs on the sense hat.
+### temp.py 
+Writes the environmental data and time to the LEDs on the sense hat.
 
-temp_log.py writes the environmental data to a simple text log.
+### temp_log.py 
+Writes the environmental data to a simple text log.
 
-temp_window.py writes the data to a window. The program writes temperature, humidity, pressure, north, CPU temperature, time and the ip address.
+### temp_window.py 
+Writes the data to a window. The program writes temperature, humidity, pressure, north, CPU temperature, time and the ip address.
 
-test.py is a simple script to test that the sense hat is working.
+### test.py 
+Is a simple script to test that the sense hat is working.
 
 [//]:<>(comment test)
